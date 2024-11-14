@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder
 import com.kodiiiofc.urbanuniversity.moviedatabase.data.MovieRepositoryImpl
 import com.kodiiiofc.urbanuniversity.moviedatabase.data.MovieService
 import com.kodiiiofc.urbanuniversity.moviedatabase.domain.MovieRepository
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
