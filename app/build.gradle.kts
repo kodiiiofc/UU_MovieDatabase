@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -10,6 +12,8 @@ android {
     namespace = "com.kodiiiofc.urbanuniversity.moviedatabase"
     compileSdk = 34
 
+    val apiKey = gradleLocalProperties(rootDir,providers)["X-API-KEY"]
+
     defaultConfig {
         applicationId = "com.kodiiiofc.urbanuniversity.moviedatabase"
         minSdk = 24
@@ -18,6 +22,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "apiKey", "${apiKey}")
     }
 
     buildTypes {
