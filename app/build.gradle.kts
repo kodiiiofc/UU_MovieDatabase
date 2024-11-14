@@ -82,8 +82,8 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
 
     //glide
-    implementation("com.github.bumptech.glide:glide:4.13.0")
-    kapt("com.github.bumptech.glide:compiler:4.13.0")
+//    implementation("com.github.bumptech.glide:glide:4.13.0")
+//    kapt("com.github.bumptech.glide:ksp:4.13.0")
 
 
 
