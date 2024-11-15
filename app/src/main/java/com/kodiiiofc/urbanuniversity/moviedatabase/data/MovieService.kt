@@ -2,6 +2,7 @@ package com.kodiiiofc.urbanuniversity.moviedatabase.data
 
 import com.kodiiiofc.urbanuniversity.moviedatabase.BuildConfig
 import com.kodiiiofc.urbanuniversity.moviedatabase.domain.models.Movie
+import com.kodiiiofc.urbanuniversity.moviedatabase.domain.models.SearchMovieResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -23,7 +24,7 @@ interface MovieService {
     @GET("/v1.4/movie/")
     fun getPagedList(
         @Query("page") currentPage: Int = 1,
-        @Query("limit") limitPages: Int,
-    )
+        @Query("limit") limitPages: Int = 10,
+    ) : Response<SearchMovieResponse>
 
 }
