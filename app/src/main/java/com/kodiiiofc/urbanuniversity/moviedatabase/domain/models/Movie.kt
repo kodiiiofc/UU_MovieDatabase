@@ -1,6 +1,6 @@
-package com.kodiiiofc.urbanuniversity.moviedatabase.domain.models.random
+package com.kodiiiofc.urbanuniversity.moviedatabase.domain.models
 
-data class MovieResponse(
+data class Movie(
     val ageRating: Any,
     val alternativeName: String,
     val audience: List<Any>,

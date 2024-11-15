@@ -1,7 +1,7 @@
-package com.kodiiiofc.urbanuniversity.moviedatabase.domain.models.random
+package com.kodiiiofc.urbanuniversity.moviedatabase.domain.models
 
 data class SearchMovieResponse(
-    val docs: List<MovieResponse>,
+    val docs: List<Movie>,
     val limit: Int,
     val page: Int,
     val pages: Int,

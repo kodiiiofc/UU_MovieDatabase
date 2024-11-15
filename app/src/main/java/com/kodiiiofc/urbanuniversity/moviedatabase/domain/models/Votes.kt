@@ -1,4 +1,4 @@
-package com.kodiiiofc.urbanuniversity.moviedatabase.domain.models.random
+package com.kodiiiofc.urbanuniversity.moviedatabase.domain.models
 
 data class Votes(
     val await: Int,
