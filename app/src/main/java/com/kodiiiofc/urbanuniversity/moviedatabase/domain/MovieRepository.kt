@@ -9,6 +9,6 @@ interface MovieRepository {
 
     suspend fun getRandomMovie() : Response<Movie>
 
-    suspend fun getPagedList(): Response<SearchMovieResponse>
+    suspend fun getPagedList(page: Int, limit: Int, listParams: String): Response<SearchMovieResponse>
 
 }

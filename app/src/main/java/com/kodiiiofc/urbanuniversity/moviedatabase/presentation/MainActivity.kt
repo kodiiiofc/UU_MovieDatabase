@@ -1,6 +1,7 @@
 package com.kodiiiofc.urbanuniversity.moviedatabase.presentation
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -38,12 +39,16 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
 
         lifecycleScope.launch {
+            Log.d("TAG", "onCreate: lifecycleScope.launch")
             viewModel.data.collectLatest {
-                adapter.submitData(it)
+                Log.d("TAG", "onCreate: viewModel.data.collectLatest")
+                adapter.submitData(it).let {
+                    Log.d("TAG", "onCreate: adapter.submitData")
+                }
             }
         }
 
-        viewModel.getRandomMovie()
+//        viewModel.getRandomMovie()
 
 
     }

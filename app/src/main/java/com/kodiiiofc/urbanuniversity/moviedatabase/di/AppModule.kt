@@ -25,7 +25,7 @@ object AppModule {
     }
 
     @Provides
-    fun baseUrl() = "https://api.kinopoisk.dev/"
+    fun baseUrl() = "https://api.kinopoisk.dev"
 
     @Provides
     fun logging() = HttpLoggingInterceptor()

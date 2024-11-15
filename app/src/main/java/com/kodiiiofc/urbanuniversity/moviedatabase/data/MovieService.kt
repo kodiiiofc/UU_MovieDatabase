@@ -21,10 +21,11 @@ interface MovieService {
         "accept: application/json",
         "X-API-KEY: ${BuildConfig.apiKey}"
     )
-    @GET("/v1.4/movie/")
-    fun getPagedList(
-        @Query("page") currentPage: Int = 1,
-        @Query("limit") limitPages: Int = 10,
+    @GET("/v1.4/movie")
+    suspend fun getPagedList(
+        @Query("page") currentPage: Int,
+        @Query("limit") limitPages: Int,
+        @Query("lists") listsParams: String
     ) : Response<SearchMovieResponse>
 
 }

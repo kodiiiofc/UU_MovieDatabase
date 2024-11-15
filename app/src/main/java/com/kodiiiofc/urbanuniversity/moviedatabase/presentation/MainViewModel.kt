@@ -1,5 +1,6 @@
 package com.kodiiiofc.urbanuniversity.moviedatabase.presentation
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,24 +20,25 @@ class MainViewModel
 
     val liveData = MutableLiveData<String>()
 
-    fun getRandomMovie() = viewModelScope.launch {
-
-        val response = repository.getRandomMovie()
-        if (response.isSuccessful) {
-            response.body().let { body ->
-                liveData.postValue(body.toString())
-            }
-        }
-
-    }
+//    fun getRandomMovie() = viewModelScope.launch {
+//
+//        val response = repository.getRandomMovie()
+//        if (response.isSuccessful) {
+//            response.body().let { body ->
+//                liveData.postValue(body.toString())
+//            }
+//        }
+//
+//    }
 
     val data = Pager(
         PagingConfig(
-            pageSize = 10,
+            pageSize = 3,
             enablePlaceholders = false,
-            initialLoadSize = 10
+            initialLoadSize = 3
         )
     ) {
+        Log.d("TAG", "MainViewModel: data")
         MoviePagingSource(repository)
     }.flow.cachedIn(viewModelScope)
 
