@@ -1,10 +1,11 @@
-package com.kodiiiofc.urbanuniversity.moviedatabase
+package com.kodiiiofc.urbanuniversity.moviedatabase.presentation
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.kodiiiofc.urbanuniversity.moviedatabase.R
 import com.kodiiiofc.urbanuniversity.moviedatabase.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

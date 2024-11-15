@@ -1,4 +1,4 @@
-package com.kodiiiofc.urbanuniversity.moviedatabase
+package com.kodiiiofc.urbanuniversity.moviedatabase.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
