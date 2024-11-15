@@ -18,19 +18,6 @@ class MainViewModel
     @Inject constructor(private val repository: MovieRepository)
  : ViewModel() {
 
-    val liveData = MutableLiveData<String>()
-
-//    fun getRandomMovie() = viewModelScope.launch {
-//
-//        val response = repository.getRandomMovie()
-//        if (response.isSuccessful) {
-//            response.body().let { body ->
-//                liveData.postValue(body.toString())
-//            }
-//        }
-//
-//    }
-
     val data = Pager(
         PagingConfig(
             pageSize = 3,

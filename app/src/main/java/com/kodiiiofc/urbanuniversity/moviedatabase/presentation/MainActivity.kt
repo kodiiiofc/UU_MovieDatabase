@@ -32,11 +32,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        viewModel.liveData.observe(this) {
-            binding.outputTv.text = it
-        }
-
-        val adapter = MoviePagingAdapter()
+        val adapter = MoviePagingAdapter(this)
         binding.recyclerView.adapter = adapter.withLoadStateFooter(MovieLoadStateAdapter())
 
         lifecycleScope.launch {
