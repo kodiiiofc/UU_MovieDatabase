@@ -5,6 +5,7 @@ import com.kodiiiofc.urbanuniversity.moviedatabase.domain.models.Movie
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.Query
 
 interface MovieService {
 
@@ -14,5 +15,15 @@ interface MovieService {
     )
     @GET("/v1.4/movie/random")
     suspend fun getRandomMovie() : Response<Movie>
+
+    @Headers(
+        "accept: application/json",
+        "X-API-KEY: ${BuildConfig.apiKey}"
+    )
+    @GET("/v1.4/movie/")
+    fun getPagedList(
+        @Query("page") currentPage: Int = 1,
+        @Query("limit") limitPages: Int,
+    )
 
 }
