@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.kodiiiofc.urbanuniversity.moviedatabase.R
 import com.kodiiiofc.urbanuniversity.moviedatabase.databinding.ActivityMainBinding
+import com.kodiiiofc.urbanuniversity.moviedatabase.presentation.paging.MovieLoadStateAdapter
 import com.kodiiiofc.urbanuniversity.moviedatabase.presentation.paging.MoviePagingAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val adapter = MoviePagingAdapter()
-        binding.recyclerView.adapter = adapter
+        binding.recyclerView.adapter = adapter.withLoadStateFooter(MovieLoadStateAdapter())
 
         lifecycleScope.launch {
             Log.d("TAG", "onCreate: lifecycleScope.launch")
@@ -47,9 +48,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
-//        viewModel.getRandomMovie()
-
 
     }
 }

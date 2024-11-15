@@ -27,8 +27,8 @@ class MoviePagingSource
 
             var moviePagedList = listOf<Movie>()
             val response = repository.getPagedList(
-                page = page,
-                limit = params.loadSize,
+                page = page + 1,
+                limit = 5,
                 listParams = "top250"
             )
             if (response.isSuccessful && response.body() != null) {
