@@ -85,8 +85,8 @@ dependencies {
     implementation("androidx.paging:paging-runtime:3.3.2")
 
     //glide
-//    implementation("com.github.bumptech.glide:glide:4.13.0")
-//    kapt("com.github.bumptech.glide:ksp:4.13.0")
+    implementation ("com.github.bumptech.glide:glide:4.13.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
 
 
 

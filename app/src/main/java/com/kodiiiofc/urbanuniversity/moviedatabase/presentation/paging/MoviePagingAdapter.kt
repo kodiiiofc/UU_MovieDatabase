@@ -29,6 +29,7 @@ class MoviePagingAdapter : PagingDataAdapter<Movie, MoviePagingAdapter.ViewHolde
         holder.binding.apply {
             movieTitle.text = movie?.name
             movieYear.text = movie?.year.toString()
+
         }
     }
 
