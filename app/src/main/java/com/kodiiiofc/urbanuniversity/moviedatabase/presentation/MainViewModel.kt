@@ -1,7 +1,6 @@
 package com.kodiiiofc.urbanuniversity.moviedatabase.presentation
 
 import android.util.Log
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
@@ -10,7 +9,6 @@ import androidx.paging.cachedIn
 import com.kodiiiofc.urbanuniversity.moviedatabase.domain.MovieRepository
 import com.kodiiiofc.urbanuniversity.moviedatabase.presentation.paging.MoviePagingSource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
