@@ -1,4 +1,4 @@
-package com.kodiiiofc.urbanuniversity.moviedatabase.presentation
+package com.kodiiiofc.urbanuniversity.moviedatabase.presentation.paging
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
